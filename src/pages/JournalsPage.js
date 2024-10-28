@@ -54,18 +54,20 @@ const JournalsPage = () => {
         },
       })
       .then((response) => {
-        // Filter journals by selected tag
+        // Get the journals from the response
         let filteredJournals = response.data;
-
+      
+        // Filter journals by the selected tag if a tag is selected
         if (selectedTagId) {
-          filteredJournals = filteredJournals.filter(journal => 
-            journal.tags.includes(selectedTagId)
+          filteredJournals = filteredJournals.filter((journal) => 
+            journal.tags && journal.tags.includes(Number(selectedTagId)) // Ensure selectedTagId is a number
           );
         }
-
+      
         setJournals(filteredJournals);
         setNoResults(filteredJournals.length === 0); // Check for no results after filtering
       })
+      
       .catch((error) => console.error('Error fetching journals:', error))
       .finally(() => setIsLoading(false));
   };

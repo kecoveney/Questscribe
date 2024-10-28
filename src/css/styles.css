@@ -6,32 +6,82 @@ body {
   background-color: #0d0d0d;
   color: #fff;
   line-height: 1.6;
-  background-image: url('../data/dndbackground.jpg');
-  background-size: cover;
+  background-image: url('../data/dndbackground.png');
+  background-size: 117%;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
+.home {
+  text-align: center;
+  padding: 2rem;
+  color: #ffd700;
+  font-family: 'Cinzel', serif;
+  background: rgba(0, 0, 0, 0.6);
+  border-top-left-radius: 10px; /* Top-left corner */
+  border-top-right-radius: 20px; /* Top-right corner */
+  border-bottom-right-radius: 30px; /* Bottom-right corner */
+  border-bottom-left-radius: 40px; /* Bottom-left corner */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.intro {
+  font-size: 1.3rem;
+  color: #ffffff;
+  margin-top: 1rem;
+  
+}
+
+.about {
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 2rem auto;
+  color: #d4af37;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.about h2 {
+  font-size: 2.2rem;
+  color: #ffd700;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.description, .features, .cta {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+  margin-bottom: 1rem;
+}
+
+.cta {
+  font-weight: bold;
+  color: #ff6f61;
+}
+
 .App {
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.7);
+  max-height: fit-content;
+  background-color: rgba(0, 0, 0, 0.03);
 }
 
 .container {
   padding: 2rem;
-  max-width: 1500px;
+  max-width: 1000px;
+  max-height: 1000px;
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.001);
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.0003);
 }
 .profile-page {
   display: flex; /* Use flexbox for layout */
   flex-direction: column; /* Stack children vertically */
   align-items: center; /* Center items horizontally */
   justify-content: flex-start; /* Align to the start vertically */
-  height: 100vh; /* Full viewport height */
+  height: 62vh; /* Full viewport height */
   padding: 1rem; /* Reduced padding for spacing */
 }
 
@@ -40,13 +90,13 @@ body {
   justify-content: center;
   margin-top: 20px; /* Reduced margin */
   padding: 1rem; /* Reduced padding */
-  background-color: rgba(20, 20, 20, 0.2);
+  background-color: rgba(0, 0, 0, 0.02);
   border-radius: 20px; /* Adjusted border radius */
 }
 
 .profile-card {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 15px; /* Reduced padding */
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px; /* Reduced padding */
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
   text-align: left;
@@ -64,8 +114,8 @@ body {
 }
 
 .profile-card img {
-  width: 120px; /* Adjust image size */
-  height: 120px; /* Adjust image size */
+  width: 130px; /* Adjust image size */
+  height: 100px; /* Adjust image size */
   border-radius: 50%; /* Circular profile photo */
   object-fit: cover; /* Cover image within bounds */
 }
@@ -140,7 +190,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: rgba(0, 0, 0, 0.95);
+  background-color: rgba(0, 0, 0, 0.5);
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
 }
 
@@ -183,7 +233,7 @@ form {
   max-width: 540px; /* Increased max-width for more spread */
   margin: 0.3rem auto; /* Centered form */
   padding: 2.2rem;
-  background-color: rgba(20, 18, 43, 0.9);
+  background-color: rgba(20, 18, 43, 0.5);
   border: 2px solid #d4af37;
   border-radius: 10px;
   display: flex;
@@ -279,7 +329,7 @@ form button:hover {
 }
 
 .journal-card {
-  background-color: #2d2d3d;
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 12px;
   padding: 1.2rem;
   height: fit-content;
@@ -357,7 +407,7 @@ form button:hover {
 /* Journal Detail Styles */
 .journal-detail {
   padding: 10px;
-  background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+  background-color: rgba(0, 0, 0, 0.45); /* Slightly transparent background */
   border-radius: 10px;
   margin: 10px auto;
   max-width: 800px;
@@ -512,8 +562,9 @@ form button:hover {
 /* User List Container */
 .user-list-container {
   padding: 20px;
-  max-width: 800px;
+  max-width: 600px;
   margin: auto;
+  align-items: center;
   text-align: center;
   background-color: rgba(20, 20, 20, 0.5); /* Slightly darker background */
   border-radius: 10px; /* Rounded corners */

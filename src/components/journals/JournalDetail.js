@@ -32,14 +32,17 @@ const JournalDetail = () => {
   const handleLikeToggle = () => {
     const token = localStorage.getItem('token');
 
-    // Like or unlike the journal
+    // Check if the current user has already liked the journal
+    const userHasLiked = Array.isArray(journal.likes) && journal.likes.includes(currentUserId);
+
+    // Toggle like or unlike
     apiFetcher.post(`/journals/${id}/like`, {}, {
       headers: {
         Authorization: `Token ${token}`,
       },
     })
     .then(() => {
-      // After toggling like, fetch the updated journal to get the updated likes list
+      // Re-fetch the updated journal data
       apiFetcher.get(`/journals/${id}`, {
         headers: {
           Authorization: `Token ${token}`,
@@ -47,7 +50,13 @@ const JournalDetail = () => {
       })
       .then((response) => {
         setJournal(response.data); // Update journal with the latest data
-        setLikeMessage('Thank you for liking!'); // Show the thank you message
+
+        // Update like message based on like or unlike action
+        if (!userHasLiked && response.data.likes.includes(currentUserId)) {
+          setLikeMessage('Thank you for the like!');
+        } else if (userHasLiked && !response.data.likes.includes(currentUserId)) {
+          setLikeMessage('You have unliked this journal.');
+        }
       })
       .catch((error) => console.error('Error re-fetching journal after like:', error));
     })
@@ -74,6 +83,10 @@ const JournalDetail = () => {
 
   if (!journal) return <p>Loading...</p>;
 
+  // Determine button label based on like status
+  const isLikedByCurrentUser = journal.likes && journal.likes.includes(currentUserId);
+  const likeButtonLabel = isLikedByCurrentUser ? 'Unlike' : 'Like';
+
   return (
     <div className="journal-detail">
       <h2>{journal.title}</h2>
@@ -85,7 +98,7 @@ const JournalDetail = () => {
       {/* Only show the Like button if the current user is not the author */}
       {currentUserId !== journal.user_id && (
         <button onClick={handleLikeToggle}>
-          {journal.likes_count > 0 ? 'Unlike' : 'Like'}
+          {likeButtonLabel}
         </button>
       )}
 

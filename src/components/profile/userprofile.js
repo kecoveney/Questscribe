@@ -13,9 +13,10 @@ const UserProfile = () => {
       try {
         const response = await profileFetcher.getProfileById(id); // Use profileFetcher to get user data
         setProfile(response); // Set the profile data
+        console.log("Fetched Profile:", response); // Debugging log to check profile data
       } catch (err) {
         setError('Error fetching user profile'); // Handle error
-        console.error(err);
+        console.error("Error fetching profile:", err); // Debugging log for errors
       }
     };
 
@@ -25,12 +26,16 @@ const UserProfile = () => {
   if (error) return <p>{error}</p>; // Display error message if any
   if (!profile) return <p>Loading...</p>; // Show loading state while fetching
 
+  // Debugging logs for comparison
+  const loggedInUserId = parseInt(localStorage.getItem('user_id'), 10);
+  console.log("Profile User ID:", profile.user_id);
+  console.log("Logged-in User ID from localStorage:", loggedInUserId);
+
   return (
     <div className="profile-page">
       <h2>{profile.display_name}'s Profile</h2>
       <div className="profile-card">
         <div className="profile-header">
-          {/* Ensure the URL is correct */}
           <img src={profile.profile_photo} alt="Profile" />
 
           <div className="profile-info-column">
@@ -48,11 +53,11 @@ const UserProfile = () => {
               <p><strong>Bio:</strong> {profile.bio}</p>
             </div>
             <div className="detail-box">
-            <p><strong>Member Since:</strong> {new Date(profile.date_joined).toLocaleDateString()}</p>
+              <p><strong>Member Since:</strong> {new Date(profile.date_joined).toLocaleDateString()}</p>
             </div>
           </div>
           {/* Show the edit button only for the logged-in user */}
-          {profile.id === parseInt(localStorage.getItem('userId')) && (
+          {profile.user_id === loggedInUserId && (
             <div className="button-container">
               <button onClick={() => navigate('/profile/edit')}>Edit Profile</button>
             </div>

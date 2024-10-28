@@ -60,6 +60,9 @@ const EditJournal = () => {
     e.preventDefault();
     const token = localStorage.getItem('token');
 
+    // Ensure tags is an array; if no tags are selected, send an empty array
+    const updatedTags = tags.length > 0 ? tags : [];
+
     apiFetcher.put(`/journals/${id}`, {
       title,
       character_name: characterName,
@@ -71,7 +74,7 @@ const EditJournal = () => {
       related_quest: relatedQuest, // Include related quest
       content,
       privacy_level: privacyLevel, // Send updated privacy level
-      tags // Send tag IDs only
+      tags: updatedTags // Send tag IDs (may be empty)
     }, {
       headers: {
         Authorization: `Token ${token}`,
@@ -170,6 +173,7 @@ const EditJournal = () => {
               </option>
             ))}
           </select>
+          <small>Select tags for this journal. It's optional to add tags.</small>
         </div>
 
         <button type="submit">Save Changes</button>

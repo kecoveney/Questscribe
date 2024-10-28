@@ -10,19 +10,25 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const user = { username, password };
-
+  
     login(user)
       .then((response) => {
-        if (response.token) {
+        console.log("Login response:", response); // Debugging log to confirm response structure
+  
+        if (response.valid) {
           alert('Login successful!');
-          localStorage.setItem('token', response.token);  // Save token
-          navigate('/');  // Redirect to home page
+          localStorage.setItem('token', response.token);       // Save the token
+          localStorage.setItem('user_id', response.id);        // Save user_id from response
+          navigate('/'); // Redirect to home page
         } else {
-          alert('Login failed');
+          alert('Login failed: ' + (response.error || 'Unknown error'));
         }
       })
       .catch((error) => alert('Error logging in'));
   };
+  
+  
+
 
   return (
     <form onSubmit={handleSubmit}>
