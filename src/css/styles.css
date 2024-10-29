@@ -3,7 +3,7 @@ body {
   font-family: 'Merriweather', serif;
   margin: 0;
   padding: 0;
-  background-color: #0d0d0d;
+  background-color: #000000;
   color: #fff;
   line-height: 1.6;
   background-image: url('../data/dndbackground.png');
@@ -30,7 +30,6 @@ body {
   font-size: 1.3rem;
   color: #ffffff;
   margin-top: 1rem;
-  
 }
 
 .about {
@@ -90,12 +89,12 @@ body {
   justify-content: center;
   margin-top: 20px; /* Reduced margin */
   padding: 1rem; /* Reduced padding */
-  background-color: rgba(0, 0, 0, 0.02);
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 20px; /* Adjusted border radius */
 }
 
 .profile-card {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.45);
   padding: 10px; /* Reduced padding */
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
@@ -153,7 +152,7 @@ body {
 }
 
 .detail-box {
-  background-color: rgba(255, 255, 255, 0.2); /* Light transparent background */
+  background-color: rgba(0, 0, 0, 0.6); /* Light transparent background */
   padding: 5px; /* Padding for each detail box */
   border-radius: 8px; /* Rounded corners for sections */
   margin: 2px 0; /* Space between boxes */
@@ -183,6 +182,22 @@ body {
   background-color: #ff4a3a; /* Darker color on hover */
 }
 
+/* Notification Delete Button Styles */
+.notification-delete-button {
+  padding: 10px 20px; /* Padding for button */
+  font-size: 1rem; /* Font size */
+  background-color: #ff6f61; /* Button color */
+  color: #fff; /* Text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.3s; /* Transition for hover effect */
+  max-width: 150px; /* Limit button width */
+}
+
+.notification-delete-button:hover {
+  background-color: #ff4a3a; /* Darker color on hover */
+}
 
 /* Navbar Styles */
 .navbar {
@@ -233,7 +248,7 @@ form {
   max-width: 540px; /* Increased max-width for more spread */
   margin: 0.3rem auto; /* Centered form */
   padding: 2.2rem;
-  background-color: rgba(20, 18, 43, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   border: 2px solid #d4af37;
   border-radius: 10px;
   display: flex;
@@ -266,7 +281,7 @@ form select {
   margin-bottom: 0.5rem; /* Reduced margin for tighter spacing */
   border: 1px solid #d4af37;
   border-radius: 6px;
-  background-color: #302f4e;
+  background-color: #000000;
   color: #ffffff;
 }
 
@@ -433,7 +448,7 @@ form button:hover {
 
 /* Comments Section */
 .comments-section {
-  background-color: rgba(255, 255, 255, 0.1); /* Light background for comments */
+  background-color: rgba(0, 0, 0, 0.1); /* Light background for comments */
   border-radius: 8px;
   padding: 10px;
   margin: 1rem 0;
@@ -444,7 +459,7 @@ form button:hover {
 }
 
 .comment-box {
-  background-color: rgba(255, 255, 255, 0.1); /* Transparent background for comment boxes */
+  background-color: rgba(0, 0, 0, 0.1); /* Transparent background for comment boxes */
   border: 1px solid #d4af37; /* Gold border */
   border-radius: 5px;
   padding: 10px;
@@ -500,15 +515,7 @@ form button:hover {
   display: flex; /* Use flexbox for horizontal layout */
   justify-content: space-between; /* Space out items */
   gap: 2.5rem; /* Space between items in the row */
-
 }
-
-.form-row > div {
-  flex: 1; /* Allow items to take equal width */
-  min-width: 50px; /* Ensure a minimum width */
-  
-}
-
 
 /* Edit Journal Styles */
 .edit-journal-container {
@@ -516,7 +523,7 @@ form button:hover {
   flex-direction: column;
   align-items: center; /* Center items horizontally */
   padding: 2rem; /* Padding for spacing */
-  background-color: rgba(20, 20, 20, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   max-width: 800px; /* Max width for the form */
   margin: auto; /* Center the form on the page */
@@ -559,6 +566,7 @@ form button:hover {
 .edit-journal-container button:hover {
   background-color: #ff4a3a; /* Darker color on hover */
 }
+
 /* User List Container */
 .user-list-container {
   padding: 20px;
@@ -566,7 +574,7 @@ form button:hover {
   margin: auto;
   align-items: center;
   text-align: center;
-  background-color: rgba(20, 20, 20, 0.5); /* Slightly darker background */
+  background-color: rgba(0, 0, 0, 0.5); /* Slightly darker background */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Shadow effect */
 }
@@ -580,7 +588,7 @@ form button:hover {
 }
 
 .user-card {
-  background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+  background-color: rgba(0, 0, 0, 0.1); /* Transparent background */
   border-radius: 10px; /* Rounded corners */
   padding: 15px; /* Inner padding */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
@@ -618,4 +626,82 @@ form button:hover {
 
 .view-profile-button:hover {
   background-color: #ff4a3a; /* Darker shade on hover */
+}
+
+/* Notification Container */
+.notification-container {
+  max-width: 800px; /* Set a max-width for the notifications */
+  margin: 20px auto; /* Center horizontally and add vertical space */
+  padding: 20px; /* Padding for inner space */
+  background-color: rgba(0, 0, 0, 0.4); /* Slightly transparent background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+/* Notification Style */
+.notification {
+  background-color: rgba(0, 0, 0, 0.3); /* Slightly darker background for each notification */
+  border-radius: 8px; /* Rounded corners for notifications */
+  padding: 15px; /* Inner padding for notifications */
+  margin-bottom: 15px; /* Space between notifications */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth background change and scale effect */
+  border-left: 4px solid #ffd700; /* Gold left border for visual separation */
+}
+
+/* Notification Hover Effect */
+.notification:hover {
+  background-color: rgba(0, 0, 0, 0.3); /* Darker on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+
+/* Notification Heading */
+.notification h3 {
+  font-size: 1.5rem; /* Heading size */
+  color: #ffd700; /* Gold color for headings */
+  margin-bottom: 10px; /* Space below the heading */
+  font-weight: bold; /* Bold text for emphasis */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle shadow for text */
+}
+
+/* Timestamp */
+.notification p {
+  margin: 5px 0; /* Space around paragraphs */
+  color: #e0e0e0; /* Light text color */
+}
+
+/* React Quill Styles */
+.ReactQuill {
+  margin-top: 10px; /* Space above React Quill */
+  border: 1px solid #d4af37; /* Border color */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px; /* Inner padding */
+  background-color: rgba(0, 0, 0, 0.6); /* Background color for Quill */
+}
+
+/* Adjustments for Quill content */
+.ReactQuill .ql-editor {
+  min-height: 100px; /* Minimum height for the editor */
+  color: #fff; /* Text color in Quill */
+  font-size: 1rem; /* Font size */
+}
+
+/* Additional styling for comment */
+.comment-content {
+  background-color: rgba(20, 20, 20, 0.8); /* Darker background for comments */
+  border-radius: 5px; /* Rounded corners for comment box */
+  padding: 10px; /* Inner padding */
+  margin-top: 5px; /* Space above comment */
+  color: #e0e0e0; /* Light text color */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .notification-container {
+    width: 90%; /* Full width on smaller screens */
+    padding: 15px; /* Less padding on smaller screens */
+  }
+
+  .notification {
+    padding: 10px; /* Less padding on notifications */
+  }
 }

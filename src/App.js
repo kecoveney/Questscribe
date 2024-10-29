@@ -12,6 +12,7 @@ import JournalsPage from './pages/JournalsPage';
 import EditJournal from './components/journals/EditJournal';
 import UserList from './components/UserList';           // Import UserList
 import UserProfile from './components/profile/userprofile'; // Import UserProfile
+import NotificationPage from './pages/notificationpage'; // Make sure this is correctly imported
 
 import './css/styles.css';  // Global CSS
 
@@ -32,8 +33,8 @@ function App() {
             <Route path="/journals/:id" element={<JournalDetail />} />  {/* Journal Detail Page */}
             <Route path="/journals" element={<JournalsPage />} /> {/* Journals List Page */}
             <Route path="/users" element={<UserList />} />          {/* User List Page */}
+            <Route path="/notifications" element={<NotificationPage />} /> {/* Correct this line */}
             <Route path="/profile/:id" element={<UserProfile />} />    {/* User Profile Page */}
-
           </Routes>
         </div>
       </div>

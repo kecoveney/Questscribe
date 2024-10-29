@@ -24,6 +24,7 @@ const Navbar = () => {
         {isAuthenticated && <li><Link to="/journals">Journals</Link></li>}
         {isAuthenticated && <li><Link to="/users">Users</Link></li>} {/* Add Users link */}
         {isAuthenticated && <li><Link to="/profile">Profile</Link></li>}
+        {isAuthenticated && <li><Link to="/notifications">Notifications</Link></li>} {/* Add Notifications link */}
         {isAuthenticated && <li><Link className="logout-button" onClick={handleLogout}>Logout</Link></li>}
       </ul>
     </nav>
