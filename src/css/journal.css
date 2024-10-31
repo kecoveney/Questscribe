@@ -1,0 +1,247 @@
+
+/* Journals Page Styles */
+.journals-page {
+    padding: 2rem;
+  }
+  
+  .journals-page h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    color: #ffd700;
+    text-align: center;
+    margin-bottom: .2rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Journal Cards */
+  .journals-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .journal-card {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    padding: 1.2rem;
+    height: fit-content;
+    width: 400px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .journal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(255, 105, 85, 0.6);
+  }
+  
+  .journal-card h3 {
+    font-size: 1.75rem;
+    color: #ffd700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .journal-card p {
+    font-size: 1rem;
+    color: #e0e0e0;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+  
+  .journal-card .date {
+    font-size: 0.9rem;
+    color: #c9c9c9;
+    margin-bottom: 0.5rem;
+  }
+  
+  .journal-card .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  .journal-card .tag {
+    background-color: #ff6f61;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    color: #fff;
+  }
+  
+  .journal-card .tag:hover {
+    background-color: #ff4a3a;
+  }
+  
+  /* Button Styles */
+  .journal-card button {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+  }
+  
+  .journal-card button:hover {
+    background-color: #ff4a3a;
+  }
+  
+  .journal-card a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Journal Detail Styles */
+  .journal-detail {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.45); /* Slightly transparent background */
+    border-radius: 10px;
+    margin: 10px auto;
+    max-width: 800px;
+  }
+  
+  .journal-content {
+    font-size: 1.2rem; /* Adjust font size */
+    line-height: 1.4; /* Increase line height for readability */
+    color: #e0e0e0; /* Adjust text color */
+  }
+  
+  .journal-content p {
+    margin-bottom: 0.5rem; /* Adds space between paragraphs */
+  }
+  
+  .journal-content b {
+    font-weight: bold; /* Bold text styling */
+  }
+  
+  .journal-content i {
+    font-style: italic; /* Italic text styling */
+  }
+  
+  /* Comments Section */
+  .comments-section {
+    background-color: rgba(0, 0, 0, 0.1); /* Light background for comments */
+    border-radius: 8px;
+    padding: 10px;
+    margin: 1rem 0;
+  }
+  
+  .comments-section h3 {
+    color: #ffd700; /* Gold color for comments header */
+  }
+  
+  .comment-box {
+    background-color: rgba(0, 0, 0, 0.1); /* Transparent background for comment boxes */
+    border: 1px solid #d4af37; /* Gold border */
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px; /* Space between comments */
+    color: #e0e0e0; /* Text color */
+  }
+  
+  /* Additional styling for links */
+  .journal-content a {
+    color: #ff6f61; /* Link color */
+    text-decoration: underline; /* Underline links */
+  }
+  
+  /* Styling for tag checkboxes */
+  .tag-checkbox {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .tag-checkbox input[type="checkbox"] {
+    display: none; /* Hide the default checkbox */
+  }
+  
+  .tag-label {
+    padding: 5px 10px;
+    background-color: #444; /* Default background */
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-left: 5px; /* Space between checkbox and label */
+  }
+  
+  .tag-checkbox input[type="checkbox"]:checked + .tag-label {
+    background-color: #ff6f61; /* Highlight color for checked */
+    color: #d33838; /* Text color for checked */
+  }
+  
+  .tag-checkbox label:hover {
+    background-color: #666; /* Hover state for label */
+  }
+  
+  .tag-checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  /* Styles for the journal form */
+  .form-row {
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: space-between; /* Space out items */
+    gap: 2.5rem; /* Space between items in the row */
+  }
+  
+  /* Edit Journal Styles */
+  .edit-journal-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    padding: 2rem; /* Padding for spacing */
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    max-width: 800px; /* Max width for the form */
+    margin: auto; /* Center the form on the page */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+  }
+  
+  .edit-journal-container h2 {
+    color: #ffd700; /* Gold color for the heading */
+    margin-bottom: 1rem; /* Space below the heading */
+  }
+  
+  .edit-journal-container label {
+    font-weight: bold; /* Bold labels */
+    color: #d4af37; /* Color for labels */
+    margin-top: 10px; /* Space above labels */
+  }
+  
+  .edit-journal-container input,
+  .edit-journal-container select {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding for inputs */
+    margin-bottom: 10px; /* Space below inputs */
+    border: 1px solid #d4af37; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    background-color: rgba(255, 255, 255, 0.1); /* Light background */
+    color: #ffffff; /* Text color */
+  }
+  
+  .edit-journal-container button {
+    margin-top: 20px; /* Space above button */
+    padding: 10px 20px; /* Button padding */
+    background-color: #ff6f61; /* Button color */
+    color: #fff; /* Button text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s; /* Transition for hover effect */
+  }
+  
+  .edit-journal-container button:hover {
+    background-color: #ff4a3a; /* Darker color on hover */
+  }

@@ -1,0 +1,56 @@
+
+/* Form Styles */
+form {
+    max-width: 540px; /* Increased max-width for more spread */
+    margin: 0.3rem auto; /* Centered form */
+    padding: 2.2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid #d4af37;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /* Flex column for vertical alignment */
+    gap: 1rem; /* Space between form elements */
+  }
+  
+  /* Container for row layout */
+  .form-row {
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: space-between; /* Space out items */
+    gap: 1rem; /* Space between items in the row */
+  }
+  
+  .form-row > div {
+    flex: 1; /* Allow items to take equal width */
+    min-width: 120px; /* Ensure a minimum width */
+  }
+  
+  form label {
+    font-weight: bold;
+    color: #d4af37;
+  }
+  
+  form input,
+  form textarea,
+  form select {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem; /* Reduced margin for tighter spacing */
+    border: 1px solid #d4af37;
+    border-radius: 6px;
+    background-color: #000000;
+    color: #ffffff;
+  }
+  
+  form button {
+    background-color: #ff6f61;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #ff4a3a;
+    box-shadow: 0 8px 15px rgba(255, 105, 85, 0.6);
+  }

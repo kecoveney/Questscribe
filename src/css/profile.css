@@ -1,0 +1,83 @@
+
+.profile-page {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: flex-start; /* Align to the start vertically */
+    height: 62vh; /* Full viewport height */
+    padding: 1rem; /* Reduced padding for spacing */
+  }
+  
+  .profile-detail-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Reduced margin */
+    padding: 1rem; /* Reduced padding */
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px; /* Adjusted border radius */
+  }
+  
+  .profile-card {
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: 10px; /* Reduced padding */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    text-align: left;
+    width: 100%;
+    max-width: 800px; /* Limited width */
+    display: flex;
+    flex-direction: row; /* Row layout */
+    align-items: flex-start; /* Align items at the top */
+    gap: 20px; /* Space between image and text */
+  }
+  
+  .profile-header {
+    display: flex; /* Use flexbox for header layout */
+    align-items: center; /* Center items vertically */
+  }
+  
+  .profile-card img {
+    width: 130px; /* Adjust image size */
+    height: 100px; /* Adjust image size */
+    border-radius: 50%; /* Circular profile photo */
+    object-fit: cover; /* Cover image within bounds */
+  }
+  
+  .profile-info-column {
+    display: flex;
+    flex-direction: column; /* Stack text vertically */
+    color: #ffd700; /* Gold color for text */
+  }
+  
+  .profile-card h1,
+  .profile-card h2,
+  .profile-card h3 {
+    margin: 0; /* Remove default margin */
+  }
+  
+  .profile-card h1 {
+    font-size: 26px; /* Adjust font size for display name */
+  }
+  
+  .profile-card h2 {
+    font-size: 22px; /* Size for username */
+  }
+  
+  .profile-card h3 {
+    font-size: 18px; /* Size for role */
+  }
+  
+  /* Profile Details */
+  .profile-details {
+    width: 100%; /* Full width for detail boxes */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Column layout for detail boxes */
+    margin-top: 10px; /* Space above details */
+  }
+  
+  .detail-box {
+    background-color: rgba(0, 0, 0, 0.6); /* Light transparent background */
+    padding: 5px; /* Padding for each detail box */
+    border-radius: 8px; /* Rounded corners for sections */
+    margin: 2px 0; /* Space between boxes */
+  }
