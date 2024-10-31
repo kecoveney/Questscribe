@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import apiFetcher, { fetchTags } from '../../data/apiFetcher';
 import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css';
+
 
 const JournalForm = () => {
   const [title, setTitle] = useState('');

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import apiFetcher from '../../data/apiFetcher';
 import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css';
+
 
 const EditJournal = () => {
   const { id } = useParams(); // Get the journal ID from the URL

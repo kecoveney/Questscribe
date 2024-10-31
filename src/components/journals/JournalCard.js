@@ -1,7 +1,7 @@
 import React from 'react';
 import apiFetcher from '../../data/apiFetcher';
 import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css';
+
 
 const JournalCard = ({ journal, tags, currentUserId, onDelete }) => {
   const handleDelete = () => {
